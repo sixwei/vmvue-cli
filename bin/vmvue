@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+//命令行式的交互效果
+
+const program = require('commander')
+
+
+program
+    .version(require('../package').version)
+    .usage('<command> [option]')
+    .command('add','add a new template')
+    .command('delete','delete a template')
+    .command('list','list all template')
+    .command('init','init a new project from a template')
+
+program.parse(process.argv)
+
